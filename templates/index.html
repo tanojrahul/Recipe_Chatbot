@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-gray-800 shadow-lg rounded-lg p-6 w-full max-w-lg">
+        <h1 class="text-2xl font-bold text-white mb-4 text-center">Ask the AI Assistant</h1>
+        <form action="/ask" method="POST" class="space-y-4">
+            <label for="question" class="block text-gray-300 text-sm font-medium">Your Question:</label>
+            <textarea id="question" name="question" rows="4"
+                      class="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Type your question here..." required></textarea>
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Submit
+            </button>
+        </form>
+        {% if error %}
+        <p class="text-red-400 text-sm mt-4">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

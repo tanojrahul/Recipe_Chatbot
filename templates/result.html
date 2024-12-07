@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Response</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-gray-800 shadow-2xl rounded-2xl p-8 w-full max-w-lg">
+        <h1 class="text-3xl font-extrabold text-blue-400 mb-6 text-center">AI Assistant Response</h1>
+
+        <!-- Question Section -->
+        <div class="bg-gray-900 p-4 rounded-lg shadow-inner">
+            <p class="text-gray-400 text-sm mb-2"><span class="text-blue-300 font-semibold">Your Question:</span></p>
+            <p class="text-gray-100 text-base font-medium mb-4">{{ question }}</p>
+        </div>
+
+        <!-- Answer Section -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-inner mt-4 h-40 overflow-y-auto">
+            <p class="text-gray-400 text-sm mb-2"><span class="text-green-300 font-semibold">AI's Answer:</span></p>
+            <p class="text-gray-100 text-lg font-medium">{{ answer }}</p>
+        </div>
+
+        <!-- Button -->
+        <a href="/"
+           class="mt-6 block w-full text-center bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 px-4 rounded-xl hover:from-blue-400 hover:to-blue-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300">
+            Ask Another Question
+        </a>
+    </div>
+</body>
+</html>
